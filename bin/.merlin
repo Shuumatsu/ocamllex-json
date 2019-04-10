@@ -1,0 +1,16 @@
+EXCLUDE_QUERY_DIR
+B /home/curry/.opam/default/lib/base
+B /home/curry/.opam/default/lib/base/caml
+B /home/curry/.opam/default/lib/base/shadow_stdlib
+B /home/curry/.opam/default/lib/sexplib0
+B /home/curry/.opam/default/lib/stdio
+B ../_build/default/bin/.main.eobjs/byte
+B ../_build/default/lib/.lib.objs/byte
+S /home/curry/.opam/default/lib/base
+S /home/curry/.opam/default/lib/base/caml
+S /home/curry/.opam/default/lib/base/shadow_stdlib
+S /home/curry/.opam/default/lib/sexplib0
+S /home/curry/.opam/default/lib/stdio
+S .
+S ../lib
+FLG -w -40
