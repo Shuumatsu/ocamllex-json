@@ -1,6 +1,4 @@
 (library
-  (name lib)
-  (modules lexing)
-  (libraries base stdio))
-
-
+ (name lib)
+ (modules token)
+ (libraries base stdio))
