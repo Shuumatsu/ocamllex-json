@@ -2,10 +2,15 @@ open Base
 open Stdio
 open Lib
 
-let lexing_stdin () =
+let parsed_json =
   let parse = Parser.prog Lexer.lexing in
   let lexbuf = Lexing.from_channel stdin in
-  match parse lexbuf with None -> "" | Some v -> Json.serialize v
+  parse lexbuf
 
 ;;
-lexing_stdin () |> Stdio.printf "%s\n"
+match parsed_json with
+| None ->
+  ()
+| Some v ->
+  Json.show_value v |> Stdio.printf "%s\n";
+  Json.serialize v |> Stdio.printf "%s\n" ;
