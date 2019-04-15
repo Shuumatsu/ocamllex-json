@@ -1,1 +1,1 @@
-dune build @fmt --auto-promote bin/main.exe --profile release -w
+dune build bin/main.exe --profile release -w

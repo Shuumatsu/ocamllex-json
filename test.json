@@ -1,4 +1,8 @@
 {
     "title": "Cities",
-    "cities": [{ "name": "Chicago", "zips": [60601] }, { "name": "New York", "zips": [10004, 23.321] }]
+    "cities": [{ "name": "Chicago", "zips": [60601] }, { "name": "New York", "zips": [10004] }],
+    "others": {
+        "float": [23.11, 32.33],
+        "bool": [true, false]
+    }
 }

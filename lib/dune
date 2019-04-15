@@ -1,4 +1,20 @@
+; (rule
+;  (targets lexer.ml)
+;  (deps lexer.mll)
+;  (action
+;   (chdir
+;    %{workspace_root}
+;    (run %{bin:ocamllex} -o %{targets} %{deps}))))
+
+(ocamllex
+ (modules lexer))
+
+(menhir
+ (modules parser))
+
 (library
  (name lib)
- (modules token)
- (libraries base stdio))
+ (modules json lexer parser)
+ (libraries core base stdio)
+ (preprocess
+  (pps ppx_jane ppx_deriving.std ppx_deriving.show)))
